@@ -340,6 +340,7 @@ p + p { margin-top: 1.1em; }
   .shot--lead { aspect-ratio: 4 / 3; }
   .contact__list a { padding-block: 4px; }
   .contact__list > div { grid-template-columns: 1fr; }
+  .contact__foot { margin-top: 48px; padding-top: 36px; }
   .contact__list dd { grid-column: 1; }
   .figures dd { font-size: clamp(1.75rem, 8vw, 2.75rem); }
   .figures dt { letter-spacing: 0.14em; }
