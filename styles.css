@@ -255,12 +255,13 @@ p + p { margin-top: 1.1em; }
 
 /* Contact and footer */
 .contact { background: var(--ink); color: var(--paper); padding: var(--section) var(--edge) calc(48px + env(safe-area-inset-bottom)); }
-.contact__main { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(36px, 6vw, 96px); }
+.contact__main { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(36px, 6vw, 96px); }
 .contact h2 { margin-bottom: 28px; }
-.contact__list { margin-bottom: 44px; }
+.contact__list { margin-bottom: 36px; padding-top: 10px; }
+.contact__list li + li { margin-top: 6px; }
 .contact__list a {
   display: inline-block; font-weight: 200; line-height: 1.35; letter-spacing: -0.01em;
-  font-size: clamp(1.4rem, 3.6vw, 3.25rem); text-decoration: none; overflow-wrap: anywhere;
+  font-size: clamp(1.25rem, 2vw, 1.75rem); text-decoration: none; overflow-wrap: anywhere;
   border-bottom: 1px solid transparent;
 }
 .contact__list a:hover { border-bottom-color: currentColor; }
