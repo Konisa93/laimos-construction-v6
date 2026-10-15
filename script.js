@@ -83,6 +83,18 @@
     a.textContent = address;
   });
 
+  // Phones: the call / WhatsApp bar shows once the opening screen is passed, and steps aside at the contact section
+  var callbar = document.querySelector(".callbar");
+  if (callbar && "IntersectionObserver" in window) {
+    var seen = { hero: true, contact: false };
+    var watch = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { seen[e.target.id === "contact" ? "contact" : "hero"] = e.isIntersecting; });
+      callbar.classList.toggle("is-shown", !seen.hero && !seen.contact);
+    });
+    watch.observe(document.querySelector(".hero"));
+    watch.observe(document.getElementById("contact"));
+  }
+
   // The year in the footer keeps itself current
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
